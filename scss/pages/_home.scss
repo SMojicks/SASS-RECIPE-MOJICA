@@ -1,0 +1,37 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.homeBanner {
+  background-color: $clr--secondary;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    align-items: center;
+    
+  }
+  &__left {
+    align-items: center;
+    small {
+      letter-spacing: 1rem;
+      color: $clr--primary;
+      font-family: $font-primary;
+    }
+    h3 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      font-family: $font-secondary;
+    }
+    p{
+        margin-bottom: 2rem;
+    }
+  }
+      &__right {
+        img{
+                margin: 4rem 0;
+                position: relative;
+                right:-10rem;
+        }
+    
+    }
+}
+
