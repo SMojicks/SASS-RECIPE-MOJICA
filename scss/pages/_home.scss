@@ -2,36 +2,213 @@
 @use "../base/" as *;
 
 .homeBanner {
+  padding: 4rem 0;
   background-color: $clr--secondary;
   &__wrapper {
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    @include gridCustom(1.5fr 2fr, 2rem);
     align-items: center;
-    
   }
   &__left {
     align-items: center;
+
     small {
       letter-spacing: 1rem;
       color: $clr--primary;
       font-family: $font-primary;
     }
-    h3 {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
       font-family: $font-secondary;
     }
-    p{
-        margin-bottom: 2rem;
+    p {
+      margin-bottom: 2rem;
     }
   }
-      &__right {
-        img{
-                margin: 4rem 0;
-                position: relative;
-                right:-10rem;
-        }
-    
+  &__right {
+    img {
+      margin: 4rem 0;
+      position: relative;
+      right: -10rem;
     }
+  }
 }
 
+.recipeWeek {
+  padding: 4rem 0;
+
+  .title {
+    display: flex;
+    align-items: center;
+    h3 {
+      font-family: $font-secondary;
+      color: $clr--primary;
+      text-align: center;
+    }
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: $clr--primary;
+    }
+    &::before {
+      margin-right: 1rem;
+    }
+    &::after {
+      margin-left: 1rem;
+    }
+  }
+  &__wrapper {
+    @include gridCustom(1fr 1fr 1fr 1fr, 1rem);
+    margin-top: 4rem;
+  }
+}
+
+.recipeCollection {
+  padding: 4rem 0;
+  .title {
+    display: flex;
+    align-items: center;
+    &::after {
+      flex: 1;
+      content: " ";
+      height: 1px;
+      background: $clr--primary;
+      margin-left: 1rem;
+    }
+    h3 {
+      font-family: $font-secondary;
+      color: $clr--primary;
+    }
+  }
+
+  .recipeGroup {
+    &:nth-of-type(even) {
+      direction: rtl;
+    }
+    &:nth-child(even) > * {
+      direction: ltr;
+    }
+
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+  &__left {
+    img {
+      @include imgFit(700px, 500px);
+    }
+  }
+  &__right {
+    margin-top: 2rem;
+    small {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-family: $font-primary;
+      letter-spacing: 10px;
+      color: $clr--primary;
+    }
+    h3 {
+      margin-top: 2rem;
+      font-family: $font-secondary;
+    }
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.newsletter {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/images/bell_pepper.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__contents {
+    padding: 10rem 0;
+    text-align: center;
+    color: white;
+
+    h2 {
+      font-family: $font-secondary;
+      margin-bottom: 2rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .input-group {
+      margin-top: 2rem;
+      display: flex;
+      width: 35rem;
+      margin: 0 auto;
+    }
+
+    .input-group input {
+      flex: 1;
+      border-right: none; /* removes double border */
+      padding: 10px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .input-group button {
+      border: 1px solid #ccc;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 0px 5px 5px 0px;
+    }
+  }
+}
+
+.classicCollection {
+  padding: 4rem 0;
+
+  .title {
+    display: flex;
+    align-items: center;
+    &::after {
+      flex: 1;
+      content: " ";
+      height: 1px;
+      background: $clr--primary;
+      margin-left: 1rem;
+    }
+    margin-bottom: 3rem;
+    color: $clr--primary;
+    h3 {
+      font-family: $font-secondary;
+    }
+  }
+  &__wrapper {
+    @include gridFixed(3, 1rem);
+  }
+  .rateCards {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 10rem;
+    gap: 1rem;
+    .left {
+      img {
+        @include imgFit(10rem, 10rem);
+      }
+    }
+    .right {
+      small {
+        color: $clr--primary;
+        font-size: 18px;
+        letter-spacing: 10px;
+      }
+      h4 {
+        font-family: $font-secondary;
+      }
+      ul {
+        display: flex;
+        li a {
+          color: $clr--primary;
+        }
+      }
+    }
+  }
+}

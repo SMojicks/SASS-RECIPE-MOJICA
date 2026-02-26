@@ -1381,6 +1381,38 @@ img {
   list-style: none;
 }
 
+.card {
+  width: 100%;
+}
+.card img {
+  width: 500px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.card__details {
+  padding: 2rem;
+  text-align: center;
+}
+.card__details small {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "Mulish", sans-serif;
+  letter-spacing: 10px;
+  color: #D9964A;
+}
+.card__details h4 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.card__details p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
 .btn {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -1460,12 +1492,30 @@ img {
   color: #666666;
 }
 
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 0;
+  background-color: #F9E9D7;
+}
+.footer__texts {
+  color: #666666;
+}
+.footer__texts span > * {
+  color: #666666;
+}
+
 .homeBanner {
+  padding: 4rem 0;
   background-color: #F9E9D7;
 }
 .homeBanner__wrapper {
   display: grid;
-  grid-template-columns: 2fr 2fr;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 2rem;
   align-items: center;
 }
 .homeBanner__left {
@@ -1476,7 +1526,7 @@ img {
   color: #D9964A;
   font-family: "Mulish", sans-serif;
 }
-.homeBanner__left h3 {
+.homeBanner__left h2 {
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-family: "Playfair Display", serif;
@@ -1488,4 +1538,182 @@ img {
   margin: 4rem 0;
   position: relative;
   right: -10rem;
+}
+
+.recipeWeek {
+  padding: 4rem 0;
+}
+.recipeWeek .title {
+  display: flex;
+  align-items: center;
+}
+.recipeWeek .title h3 {
+  font-family: "Playfair Display", serif;
+  color: #D9964A;
+  text-align: center;
+}
+.recipeWeek .title::before, .recipeWeek .title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #D9964A;
+}
+.recipeWeek .title::before {
+  margin-right: 1rem;
+}
+.recipeWeek .title::after {
+  margin-left: 1rem;
+}
+.recipeWeek__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.recipeCollection {
+  padding: 4rem 0;
+}
+.recipeCollection .title {
+  display: flex;
+  align-items: center;
+}
+.recipeCollection .title::after {
+  flex: 1;
+  content: " ";
+  height: 1px;
+  background: #D9964A;
+  margin-left: 1rem;
+}
+.recipeCollection .title h3 {
+  font-family: "Playfair Display", serif;
+  color: #D9964A;
+}
+.recipeCollection .recipeGroup:nth-of-type(even) {
+  direction: rtl;
+}
+.recipeCollection .recipeGroup:nth-child(even) > * {
+  direction: ltr;
+}
+.recipeCollection .recipeGroup {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.recipeCollection__left img {
+  width: 700px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.recipeCollection__right {
+  margin-top: 2rem;
+}
+.recipeCollection__right small {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "Mulish", sans-serif;
+  letter-spacing: 10px;
+  color: #D9964A;
+}
+.recipeCollection__right h3 {
+  margin-top: 2rem;
+  font-family: "Playfair Display", serif;
+}
+.recipeCollection__right p {
+  margin-bottom: 2rem;
+}
+
+.newsletter {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/bell_pepper.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.newsletter__contents {
+  padding: 10rem 0;
+  text-align: center;
+  color: white;
+}
+.newsletter__contents h2 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 2rem;
+}
+.newsletter__contents p {
+  margin-bottom: 1rem;
+}
+.newsletter__contents .input-group {
+  margin-top: 2rem;
+  display: flex;
+  width: 35rem;
+  margin: 0 auto;
+}
+.newsletter__contents .input-group input {
+  flex: 1;
+  border-right: none; /* removes double border */
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+}
+.newsletter__contents .input-group button {
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.classicCollection {
+  padding: 4rem 0;
+}
+.classicCollection .title {
+  display: flex;
+  align-items: center;
+}
+.classicCollection .title::after {
+  flex: 1;
+  content: " ";
+  height: 1px;
+  background: #D9964A;
+  margin-left: 1rem;
+}
+.classicCollection .title {
+  margin-bottom: 3rem;
+  color: #D9964A;
+}
+.classicCollection .title h3 {
+  font-family: "Playfair Display", serif;
+}
+.classicCollection__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.classicCollection .rateCards {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 10rem;
+  gap: 1rem;
+}
+.classicCollection .rateCards .left img {
+  width: 10rem;
+  height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.classicCollection .rateCards .right small {
+  color: #D9964A;
+  font-size: 18px;
+  letter-spacing: 10px;
+}
+.classicCollection .rateCards .right h4 {
+  font-family: "Playfair Display", serif;
+}
+.classicCollection .rateCards .right ul {
+  display: flex;
+}
+.classicCollection .rateCards .right ul li a {
+  color: #D9964A;
 }/*# sourceMappingURL=main.min.css.map */
