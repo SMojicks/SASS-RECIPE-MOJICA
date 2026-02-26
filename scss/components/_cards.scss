@@ -28,4 +28,32 @@
   }
 }
 
+.rateCards {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 10rem;
+    gap: 1rem;
+    .left {
+      img {
+        @include imgFit(10rem, 10rem);
+      }
+    }
+    .right {
+      small {
+        color: $clr--primary;
+        font-size: 18px;
+        letter-spacing: 10px;
+      }
+      h4 {
+        font-family: $font-secondary;
+      }
+      ul {
+        display: flex;
+        li a {
+          color: $clr--primary;
+        }
+      }
+    }
+  }
+
 

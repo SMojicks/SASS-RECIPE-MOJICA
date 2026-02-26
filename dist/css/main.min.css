@@ -1413,6 +1413,35 @@ img {
   text-align: justify;
 }
 
+.rateCards {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 10rem;
+  gap: 1rem;
+}
+.rateCards .left img {
+  width: 10rem;
+  height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.rateCards .right small {
+  color: #D9964A;
+  font-size: 18px;
+  letter-spacing: 10px;
+}
+.rateCards .right h4 {
+  font-family: "Playfair Display", serif;
+}
+.rateCards .right ul {
+  display: flex;
+}
+.rateCards .right ul li a {
+  color: #D9964A;
+}
+
 .btn {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -1716,4 +1745,151 @@ img {
 }
 .classicCollection .rateCards .right ul li a {
   color: #D9964A;
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 70vh;
+  background-color: #F9E9D7;
+}
+
+.aboutBanner {
+  padding: 4rem 0;
+}
+.aboutBanner__wrapper {
+  display: grid;
+  grid-template-areas: "a a" "b c";
+}
+.aboutBanner__grid--a {
+  grid-area: a;
+  margin-bottom: 4rem;
+}
+.aboutBanner__grid--a h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 2rem;
+}
+.aboutBanner__grid--b {
+  grid-area: b;
+  margin-right: 2rem;
+}
+.aboutBanner__grid--b h1 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 3rem;
+}
+.aboutBanner__grid--b p {
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+.aboutBanner__grid--b p:nth-child(4), .aboutBanner__grid--b p:nth-child(5), .aboutBanner__grid--b p:nth-child(6) {
+  text-align: unset;
+  margin-bottom: unset;
+}
+.aboutBanner__grid--c {
+  grid-area: c;
+}
+.aboutBanner__grid--c h3 {
+  margin-bottom: 2rem;
+  font-family: "Playfair Display", serif;
+  color: #D9964A;
+}
+.aboutBanner__grid--c .rateCards {
+  margin-bottom: 2rem;
+}
+.aboutBanner__grid--c .rateCards img {
+  width: 150px;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 70vh;
+  background-color: #F9E9D7;
+}
+
+.contactBanner1 {
+  padding: 4rem 0;
+}
+
+.contactBanner {
+  padding-bottom: 4rem;
+}
+.contactBanner__wrapper {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+.contactBanner__grid--a {
+  -moz-text-align-last: center;
+       text-align-last: center;
+}
+.contactBanner__grid--a h2 {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 2rem;
+}
+.contactBanner__grid--b {
+  max-width: 1200px;
+}
+.contactBanner__grid--b h2 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 3rem;
+}
+.contactBanner__grid--b form label {
+  display: block;
+  font-size: 24px;
+}
+.contactBanner__grid--b form input {
+  width: 100%;
+  border: 1px solid #666666;
+  height: 3rem;
+}
+.contactBanner__grid--b form textarea {
+  width: 100%;
+  border: 1px solid #666666;
+  resize: none;
+  height: 7rem;
+}
+.contactBanner__grid--c {
+  margin-top: 8rem;
+  margin-left: 6rem;
+}
+.contactBanner__grid--c h4 {
+  color: #dedbdb;
+  font-family: "Playfair Display", serif;
+}
+.contactBanner__grid--c .contactGroup {
+  margin-top: 4rem;
+  padding: 2rem;
+  height: 80%;
+  background-color: #D9964A;
+}
+.contactBanner__grid--c .contactGroup .contact__info {
+  color: #dedbdb;
+  padding: auto;
+}
+.contactBanner__grid--c .contactGroup .contact__info h4 {
+  margin-bottom: 2rem;
+}
+.contactBanner__grid--c .contactGroup .contact__info p {
+  margin-bottom: 1rem;
+}
+.contactBanner__grid--c .contactGroup .contact__info span {
+  display: flex;
+  gap: 1rem;
+}
+.contactBanner__grid--c .contactGroup .contact__info span:last-child {
+  width: 90%;
+}
+.contactBanner__grid--c .contactGroup .contact__info span a {
+  color: #dedbdb;
 }/*# sourceMappingURL=main.min.css.map */
