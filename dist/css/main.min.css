@@ -1845,6 +1845,7 @@ img {
   margin-bottom: 3rem;
 }
 .contactBanner__grid--b form label {
+  margin-top: 2rem;
   display: block;
   font-size: 24px;
 }
@@ -1868,7 +1869,7 @@ img {
   font-family: "Playfair Display", serif;
 }
 .contactBanner__grid--c .contactGroup {
-  margin-top: 4rem;
+  margin-bottom: 7rem;
   padding: 2rem;
   height: 80%;
   background-color: #D9964A;

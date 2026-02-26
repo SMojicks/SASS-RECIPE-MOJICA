@@ -40,7 +40,9 @@
       font-family: $font-secondary;
       margin-bottom: 3rem;
     }
+
     form label {
+        margin-top: 2rem;
       display: block;
       font-size: 24px;
     }
@@ -66,7 +68,8 @@
         font-family: $font-secondary;
       }
       .contactGroup {
-        margin-top: 4rem;
+        // margin-top: 4rem;
+        margin-bottom: 7rem;
         padding: 2rem;
         // width: 70%;
         height: 80%;
