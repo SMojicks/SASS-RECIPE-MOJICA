@@ -1372,6 +1372,11 @@ img {
   margin: 0 auto;
   padding: 0 5rem;
 }
+@media screen and (max-width: 520px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
 
 * {
   margin: 0;
@@ -1520,6 +1525,60 @@ img {
 .header__nav ul li a {
   color: #666666;
 }
+.header .toggle__menu {
+  display: none;
+}
+.header .toggle__menu span {
+  background-color: #666666;
+  color: #666666;
+  width: 2.5rem;
+  height: 0.1rem;
+  border: 2px solid #666666;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 520px) {
+  .header {
+    position: fixed;
+    width: 100%;
+  }
+  .header__nav ul {
+    background-color: #D9964A;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    right: -100%;
+    z-index: 999;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    padding-top: 2rem;
+  }
+  .header__nav ul li a {
+    color: #dedbdb;
+  }
+  .header__nav.open ul {
+    right: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  .header .toggle__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .header .toggle__menu.open span:first-child {
+    transform: translate(0, 10px) rotate(225deg);
+    transition: 0.5s ease-in-out;
+  }
+  .header .toggle__menu.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .header .toggle__menu.open span:last-child {
+    transform: translate(0, -14px) rotate(-225deg);
+    transition: 0.5s ease-in-out;
+  }
+}
 
 .footer {
   display: flex;
@@ -1540,6 +1599,11 @@ img {
   padding: 4rem 0;
   background-color: #F9E9D7;
 }
+@media screen and (max-width: 520px) {
+  .homeBanner {
+    padding-top: 170px;
+  }
+}
 .homeBanner__wrapper {
   display: grid;
   display: grid;
@@ -1547,8 +1611,19 @@ img {
   gap: 2rem;
   align-items: center;
 }
+@media screen and (max-width: 520px) {
+  .homeBanner__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .homeBanner__left {
   align-items: center;
+}
+@media screen and (max-width: 520px) {
+  .homeBanner__left p {
+    text-align: justify;
+  }
 }
 .homeBanner__left small {
   letter-spacing: 1rem;
@@ -1563,10 +1638,24 @@ img {
 .homeBanner__left p {
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 520px) {
+  .homeBanner__right {
+    order: -1;
+  }
+}
 .homeBanner__right img {
   margin: 4rem 0;
   position: relative;
   right: -10rem;
+}
+@media screen and (max-width: 520px) {
+  .homeBanner__right img {
+    position: static;
+    right: 0;
+    display: block;
+    margin: 2rem auto;
+    width: 100%;
+  }
 }
 
 .recipeWeek {
@@ -1599,6 +1688,18 @@ img {
   gap: 1rem;
   margin-top: 4rem;
 }
+@media screen and (max-width: 520px) {
+  .recipeWeek__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .recipeWeek .card__details {
+    padding: 0;
+  }
+}
 
 .recipeCollection {
   padding: 4rem 0;
@@ -1630,6 +1731,13 @@ img {
   gap: 3rem;
   margin-top: 2rem;
 }
+@media screen and (max-width: 520px) {
+  .recipeCollection .recipeGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
 .recipeCollection__left img {
   width: 700px;
   height: 500px;
@@ -1654,6 +1762,17 @@ img {
 }
 .recipeCollection__right p {
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .recipeCollection__right {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 520px) {
+  .recipeCollection h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
 }
 
 .newsletter {
@@ -1691,6 +1810,14 @@ img {
   cursor: pointer;
   border-radius: 0px 5px 5px 0px;
 }
+@media screen and (max-width: 520px) {
+  .newsletter p {
+    text-align: justify;
+  }
+  .newsletter .input-group {
+    width: 100%;
+  }
+}
 
 .classicCollection {
   padding: 4rem 0;
@@ -1717,6 +1844,13 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+}
+@media screen and (max-width: 520px) {
+  .classicCollection__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 .classicCollection .rateCards {
   display: grid;
@@ -1754,13 +1888,29 @@ img {
   height: 70vh;
   background-color: #F9E9D7;
 }
+@media screen and (max-width: 520px) {
+  .bg {
+    height: 50vh;
+  }
+}
 
 .aboutBanner {
   padding: 4rem 0;
 }
+@media screen and (max-width: 520px) {
+  .aboutBanner {
+    padding-top: 170px;
+  }
+}
 .aboutBanner__wrapper {
   display: grid;
   grid-template-areas: "a a" "b c";
+}
+@media screen and (max-width: 520px) {
+  .aboutBanner__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .aboutBanner__grid--a {
   grid-area: a;
@@ -1770,6 +1920,11 @@ img {
   text-align: center;
   font-family: "Playfair Display", serif;
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .aboutBanner__grid--a {
+    margin-bottom: 2rem;
+  }
 }
 .aboutBanner__grid--b {
   grid-area: b;
@@ -1786,6 +1941,11 @@ img {
 .aboutBanner__grid--b p:nth-child(4), .aboutBanner__grid--b p:nth-child(5), .aboutBanner__grid--b p:nth-child(6) {
   text-align: unset;
   margin-bottom: unset;
+}
+@media screen and (max-width: 520px) {
+  .aboutBanner__grid--b {
+    margin-right: 0;
+  }
 }
 .aboutBanner__grid--c {
   grid-area: c;
@@ -1806,6 +1966,11 @@ img {
   -o-object-position: center;
      object-position: center;
 }
+@media screen and (max-width: 520px) {
+  .aboutBanner__grid--c h3 {
+    margin-top: 2rem;
+  }
+}
 
 .bg {
   position: absolute;
@@ -1814,9 +1979,20 @@ img {
   height: 70vh;
   background-color: #F9E9D7;
 }
+@media screen and (max-width: 520px) {
+  .bg {
+    height: 50vh;
+  }
+}
 
 .contactBanner1 {
   padding: 4rem 0;
+}
+@media screen and (max-width: 520px) {
+  .contactBanner1 {
+    padding-top: 170px;
+    padding-bottom: 2rem;
+  }
 }
 
 .contactBanner {
@@ -1827,6 +2003,12 @@ img {
   grid-template-columns: 2.5fr 1fr;
   gap: 1rem;
   align-items: center;
+}
+@media screen and (max-width: 520px) {
+  .contactBanner__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .contactBanner__grid--a {
   -moz-text-align-last: center;
@@ -1860,9 +2042,20 @@ img {
   resize: none;
   height: 7rem;
 }
+@media screen and (max-width: 520px) {
+  .contactBanner__grid--b h2 {
+    margin-bottom: 1rem;
+  }
+}
 .contactBanner__grid--c {
   margin-top: 8rem;
   margin-left: 6rem;
+}
+@media screen and (max-width: 520px) {
+  .contactBanner__grid--c {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
 }
 .contactBanner__grid--c h4 {
   color: #dedbdb;
@@ -1902,17 +2095,37 @@ img {
   height: 100vh;
   background-color: #F9E9D7;
 }
+@media screen and (max-width: 520px) {
+  .bg {
+    height: 50vh;
+  }
+}
 
 .tutorialBanner {
   padding: 4rem 0;
+}
+@media screen and (max-width: 520px) {
+  .tutorialBanner {
+    padding-top: 170px;
+  }
 }
 .tutorialBanner .title {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 520px) {
+  .tutorialBanner .title {
+    flex-direction: column;
+  }
+}
 .tutorialBanner .title h2 {
   font-family: "Playfair Display", serif;
   max-width: 40%;
+}
+@media screen and (max-width: 520px) {
+  .tutorialBanner .title h2 {
+    max-width: 100%;
+  }
 }
 .tutorialBanner .title p > span {
   font-family: "Mulish", sans-serif;
@@ -1922,6 +2135,12 @@ img {
   margin: 0;
   align-self: flex-end;
 }
+@media screen and (max-width: 520px) {
+  .tutorialBanner .title p {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+  }
+}
 .tutorialBanner__details {
   position: relative;
   padding: 2rem 0;
@@ -1930,6 +2149,12 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 520px) {
+  .tutorialBanner__details {
+    margin: 2rem 0;
+    padding: 1rem 0;
+  }
 }
 .tutorialBanner__details p > span {
   font-family: "Mulish", sans-serif;
@@ -1953,6 +2178,12 @@ img {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 1rem;
+}
+@media screen and (max-width: 520px) {
+  .tutorialBanner__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .tutorialBanner__left img {
   height: 100%;
@@ -1998,6 +2229,12 @@ img {
   grid-template-columns: 2fr 1fr;
   gap: 4rem;
 }
+@media screen and (max-width: 520px) {
+  .direction__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .direction__right h3 {
   margin: 2rem 0;
   font-family: "Playfair Display", serif;
@@ -2024,7 +2261,7 @@ img {
   font-size: 16px;
   color: black;
   padding: 0.5rem 1rem;
-  background-color: #B2B2B2;
+  background-color: #b2b2b2;
   border-radius: 20px;
 }
 .direction__right--tags .tagGroup {
@@ -2034,6 +2271,11 @@ img {
 .direction__right--tags .tagGroup ul {
   margin: 0 1rem;
   max-width: 70%;
+}
+@media screen and (max-width: 520px) {
+  .direction__right--tags .tagGroup ul {
+    max-width: 100%;
+  }
 }
 .direction .left__steps {
   margin-bottom: 2rem;
@@ -2069,4 +2311,9 @@ img {
   color: #D9964A;
   font-family: "Playfair Display", serif;
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .direction .direction__video .ytvideo iframe {
+    width: 450px;
+  }
 }/*# sourceMappingURL=main.min.css.map */

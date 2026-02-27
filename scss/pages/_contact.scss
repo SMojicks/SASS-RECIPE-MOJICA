@@ -8,15 +8,26 @@
   width: 100%;
   height: 70vh;
   background-color: $clr--secondary;
+  @include mediaQuery(520px){
+    height: 50vh;
+  }
 }
 .contactBanner1{
     padding: 4rem 0;
+    @include mediaQuery(520px){
+      padding-top: 170px;
+      padding-bottom: 2rem;
+    }
 }
 .contactBanner{
   padding-bottom: 4rem;
   &__wrapper {
     @include gridCustom(2.5fr 1fr, 1rem);
     align-items: center;
+    @include mediaQuery(520px){
+      display: flex;
+      flex-direction: column;
+    }
   }
   //   &__wrapper {
   //     display: grid;
@@ -57,12 +68,21 @@
       resize: none;
       height: 7rem;
     }
+    @include mediaQuery(520px){
+      h2{
+      margin-bottom: 1rem;
+      }
+
+    }
   }
     &__grid--c {
-    //   grid-area: c;
       margin-top: 8rem;
       margin-left: 6rem;
+      @include mediaQuery(520px){
+        margin-left: 4rem;
+        margin-right: 4rem;
 
+      }
       h4 {
         color: $clr--light;
         font-family: $font-secondary;
@@ -83,7 +103,6 @@
           p {
             margin-bottom: 1rem;
           }
-
           span {
             display: flex;
             gap: 1rem;
